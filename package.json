@@ -2,7 +2,7 @@
   "name": "node-api-boilerplate",
   "version": "1.0.0",
   "description": "This is a simple boilerplate for building API with Node.",
-  "main": "index.js",
+  "main": "build/bin/server.js",
   "scripts": {
     "dev": "babel-node ./src/bin/server",
     "test": "echo \"Error: no test specified\" && exit 1"

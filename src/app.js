@@ -1,9 +1,7 @@
 import express from 'express';
-const app = express();
+import routes from './routes';
 
-app.get('/', (req, res) => {
-  console.log('==========');
-  res.send('ok');
-});
+const app = express();
+app.use('/', routes)
 
 export default app;
