@@ -14,6 +14,7 @@ const mongoose = require('mongoose');
 const expressValidator = require('express-validator');
 const multer = require('multer');
 const upload = multer({ dest: path.join(__dirname, 'uploads') });
+const cors = require('cors');
 
 // mongoose.connect(process.env.MONGODB_URI || process.env.MONGOLAB_URI);
 // mongoose.connection.on('error', () => {
@@ -46,6 +47,7 @@ app.use(flash());
 // });
 app.use(lusca.xframe('SAMEORIGIN'));
 app.use(lusca.xssProtection(true));
+app.use(cors());
 app.use('/', routes)
 app.use(errorHandler());
 
