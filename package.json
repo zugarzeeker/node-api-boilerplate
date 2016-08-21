@@ -6,6 +6,8 @@
   "scripts": {
     "eslint": "eslint --quiet **/**/*.js **/*.js **.js",
     "dev": "babel-node ./src/bin/server",
+    "build": "babel src --out-dir build --source-maps",
+    "start": "node build/bin/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

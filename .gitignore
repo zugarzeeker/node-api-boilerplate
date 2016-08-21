@@ -38,3 +38,6 @@ jspm_packages
 
 # Sensitive files
 config
+
+# build files
+build
