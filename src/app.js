@@ -1,4 +1,5 @@
 import routes from './routes';
+import authenticator from './middlewares/authenticator';
 
 const express = require('express');
 const compression = require('compression');
@@ -49,6 +50,7 @@ app.use((req, res, next) => {
 app.use(lusca.xframe('SAMEORIGIN'));
 app.use(lusca.xssProtection(true));
 app.use(cors());
+app.use(authenticator);
 app.use('/', routes)
 app.use(errorHandler());
 
