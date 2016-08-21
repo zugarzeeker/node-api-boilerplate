@@ -19,7 +19,7 @@ const config = require('config');
 
 // const upload = multer({ dest: path.join(__dirname, 'uploads') });
 
-mongoose.connect(process.env.MONGODB_URI || process.env.MONGOLAB_URI || config.MONGOLAB_URI);
+mongoose.connect(process.env.MONGODB_URI || process.env.MONGOLAB_URI || config.MONGODB_URI);
 mongoose.connection.on('error', () => {
   console.error('MongoDB Connection Error. Please make sure that MongoDB is running.');
   process.exit(1);
@@ -36,7 +36,7 @@ app.use(session({
   saveUninitialized: true,
   secret: process.env.SESSION_SECRET,
   store: new MongoStore({
-    url: process.env.MONGODB_URI || process.env.MONGOLAB_URI || config.MONGOLAB_URI,
+    url: process.env.MONGODB_URI || process.env.MONGOLAB_URI || config.MONGODB_URI,
     autoReconnect: true
   })
 }));
