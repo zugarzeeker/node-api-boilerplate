@@ -1,0 +1,30 @@
+{
+  "parser": "babel-eslint",
+  "rules": {
+    "no-console": 0,
+    "no-use-before-define": "off",
+    "no-param-reassign": 0,
+    "no-shadow": "off",
+    "func-name": "off",
+    "global-require": "off",
+    "max-len": "off",
+    "new-cap": ["error", { "capIsNewExceptionPattern": "^Router" }],
+    "comma-dangle": ["error", "never"]
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "extends": "airbnb-base/legacy",
+  "ecmaFeatures": {
+    "experimentalObjectRestSpread": true
+  },
+  "plugins": [
+    "babel"
+  ],
+  "globals": {
+    "describe": true,
+    "it": true
+  }
+}

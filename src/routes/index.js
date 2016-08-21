@@ -1,4 +1,4 @@
-import { Router } from 'express'
+import { Router } from 'express';
 import sample from './sample';
 
 const router = Router();
