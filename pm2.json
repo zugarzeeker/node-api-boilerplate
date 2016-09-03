@@ -1,0 +1,18 @@
+{
+  "apps": [
+    {
+      "exec_mode": "fork_mode",
+      "script": "./src/bin/server.js",
+      "name": "node-api-boilerplate",
+      "interpreter": "./node_modules/.bin/babel-node",
+      "env": {
+        "PORT": 8080,
+        "NODE_ENV": "dev"
+      },
+      "error_file": "./pm2/logs/node-api-boilerplate.err.log",
+      "out_file": "./pm2/logs/node-api-boilerplate.out.log",
+      "watch": "src",
+      "log_date_format"  : "YYYY-MM-DD HH:mm Z",
+    }
+  ]
+}
