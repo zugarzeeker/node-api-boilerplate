@@ -50,6 +50,7 @@ app.use((req, res, next) => {
 });
 app.use(lusca.xframe('SAMEORIGIN'));
 app.use(lusca.xssProtection(true));
+app.disable('etag');
 app.use(cors());
 app.use(authenticator);
 app.use('/', routes);
