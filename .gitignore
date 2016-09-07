@@ -41,3 +41,4 @@ config
 
 # build files
 build
+uploads
