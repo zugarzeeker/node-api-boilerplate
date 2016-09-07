@@ -3,14 +3,29 @@
     <title>File upload Node.</title>
   </head>
   <body>
+    <div>
       <form id="uploadForm"
           enctype="multipart/form-data"
           action="http://localhost:8080/sample/upload"
           method="post">
-      <input type="file" name="file" multiple />
-      <input type="submit" value="Upload Image" name="submit">
-      <input type='text' id='random' name='random'><br>
-      <span id = "status"></span>
-    </form>
+        <input type="file" name="file" multiple />
+        <input type="submit" value="Upload Image" name="submit">
+        <input type='text' id='random' name='random'><br>
+        <span id = "status"></span>
+      </form>
+    </div>
+
+    <div>
+      <form id="uploadForm"
+          enctype="multipart/form-data"
+          action="http://localhost:8080/sample/upload-multiple"
+          method="post">
+        <input type="file" name="files" />
+        <input type="file" name="files" />
+        <input type="submit" value="Upload Image" name="submit">
+        <input type='text' id='random' name='random'><br>
+        <span id = "status"></span>
+      </form>
+    </div>
   </body>
 </html>

@@ -23,9 +23,10 @@ const upload = multer({
   storage,
   limits: {
     fileSize: LIMIT_10_MB,
-    files: 1
+    files: 10
     // fields: 2
   }
 });
 
 export const singleUpload = [upload.single('file'), fileFilter];
+export const multipleUpload = [upload.array('files', 10)];
